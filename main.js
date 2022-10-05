@@ -30,7 +30,7 @@ const sphere = new THREE.Mesh(
     fragmentShader,
     uniforms: { 
       globeTexture: { 
-        value: new THREE.TextureLoader().load('./imgs/globe.jpeg')
+        value: new THREE.TextureLoader().load('/imgs/globe.jpeg')
       }
     }
   })
@@ -58,6 +58,7 @@ scene.add(group);
 var controls = new OrbitControls(camera, renderer.domElement);
 camera.position.z = 10
 controls.enableZoom = false;
+controls.enablePan = false;
 
 function animate() {
   requestAnimationFrame(animate);
